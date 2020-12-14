@@ -1,0 +1,56 @@
+.footerBlock {
+    display: flex;
+    background: #0eb493;
+    .footer {
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        width: 1170px;
+        padding: 30px;
+        font-size: 14px;
+        padding-left: 0;
+        &__section {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            color: white;
+            &-links {
+                width: 15%;
+                display: flex;
+                flex-direction: column;
+            }
+            .points {
+                text-align: left;
+                font-weight: 400;
+                text-transform: uppercase;
+                .menu-item {
+                    a {
+                        color: white;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+
+                }
+                &__item { 
+                    
+                }
+            }
+            .officialPage {
+                width: 25%;
+                &__item {
+                    text-transform: inherit;
+                    text-align: left;
+                    font-weight: 400;
+                    a {
+                        color: white;
+                        text-transform: inherit;
+                    }
+                    a:hover {
+                            text-decoration: underline;
+                        }
+                }
+            }
+        }
+    }
+}
