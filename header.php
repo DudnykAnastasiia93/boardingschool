@@ -20,7 +20,7 @@
         </div>
         <?php
         wp_nav_menu([
-            'theme_location' => '',
+            'theme_location' => 'Assigned Menu',
             'menu' => 'header_menu',
             'container' => 'div',
             'container_class' => '',
@@ -34,7 +34,7 @@
             'link_before' => '',
             'link_after' => '',
             'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-            'depth' => 0,
+            'depth' => 2,
             'walker' => '',
         ]);
         ?>

@@ -16,13 +16,28 @@
             display: flex;
             justify-content: space-around;
             li {
-                padding: 20px 0;
+                padding: 20px 5px;
+                position: relative;
+                display: inline-block;
                 a:hover {
                     padding: 20px 0;
                     text-decoration: none;
                     background-color: transparent;
                     border-top: 3px solid #fff618;
-                    color: rgba(255, 255, 255, 0.89);
+                    color:#fff618;
+                }
+                & ul {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 240px;
+                    background-color: rgba(18, 40, 83, 0.76);
+                    border-left: 4px solid #fff618;
+                    & li {
+                        a:hover {
+                            border: none;
+                        }
+                    }
                 }
                 a {
                 color: white;

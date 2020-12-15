@@ -106,4 +106,7 @@ function kama_excerpt($args = '')
  *       - Немного изменил логику кода.
  */
 
-
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+function my_scripts_method(){
+	wp_enqueue_script( 'jquery' );
+}

@@ -82,7 +82,7 @@
     </div>
 </section>
 
-
+<script src="<?php echo ASSETS_PATH . '/assets/js/main.js'?>"></script>
 </body>
 
 </html>

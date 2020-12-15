@@ -84,6 +84,7 @@
                     border: 1px solid white;
                     padding: 10px;
                     border-radius: 10%;
+                    
                     &-red {
                         background: rgba(221, 2, 2, 0.986);
                     }
@@ -103,6 +104,8 @@
                         background: rgb(4, 183, 189);
                     }
                 }
+                
+                
 
                 &__title {
                     margin: auto 10px;

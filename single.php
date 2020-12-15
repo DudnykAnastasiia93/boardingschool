@@ -32,7 +32,9 @@ $posts = get_posts($args);
                     $imgs = get_field('main_img');
                     $page_img = $imgs['sizes']['large'];
                     ?>
-                    <img src="<?php echo $page_img; ?>">
+                    <?php if($page_img):?>
+                    <img src="<?php echo $page_img;?>"> 
+                    <?endif;?>
                 </div>
                 <div class="content__text">
                     <?php the_content(); ?>
