@@ -1,23 +1,30 @@
 .footerBlock {
     display: flex;
-    background: #0eb493;
+    background: #2a3e65;
     .footer {
         display: flex;
         margin: 0 auto;
         text-align: center;
-        width: 1170px;
+        max-width: 1170px;
         padding: 30px;
         font-size: 14px;
         padding-left: 0;
         &__section {
             display: flex;
-            width: 100%;
             justify-content: space-around;
-            color: white;
+            .footerMenu__items{
+                display: flex;
+                width: 60%;
+                justify-content: space-around;
+                color: black;
+            }
             &-links {
                 width: 15%;
                 display: flex;
                 flex-direction: column;
+                img {
+                    object-fit: contain;
+                }
             }
             .points {
                 text-align: left;
@@ -31,9 +38,6 @@
                         text-decoration: underline;
                     }
 
-                }
-                &__item { 
-                    
                 }
             }
             .officialPage {
@@ -53,4 +57,51 @@
             }
         }
     }
+}
+
+
+@media screen {
+  .footerBlock .footer {
+    @media (max-width: 1080px) {
+        font-size: 12px;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    .footer__section {
+        @media (max-width: 768px) {
+            justify-content: space-evenly;
+            }
+        @media (max-width: 425px) {
+            flex-wrap: wrap;
+            }
+        .footerMenu__items {
+            @media (max-width: 1080px) {
+            width: 70%;
+            }
+            @media (max-width: 768px) {
+            flex-direction: column;
+            width: 30%;
+            }
+            @media (max-width: 425px) {
+            width: 95%;
+            }
+        }
+        .officialPage {
+            @media (max-width: 768px) {
+            width: 40%;
+            }
+            @media (max-width: 425px) {
+            width: 95%;
+            }
+        }
+    }
+    .footer__section-links {
+        @media (max-width: 768px) {
+        flex-direction: row;
+        width: 40%;
+        margin: 10px auto;
+        }
+    }
+}
 }

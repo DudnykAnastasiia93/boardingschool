@@ -1,6 +1,6 @@
 .container {
     .center {
-        width: 1170px;
+        max-width: 1170px;
         margin: 20px auto 70px;
         background: white;
         .headerBlock {
@@ -40,6 +40,7 @@
         }
         .mainBlock {
             display: flex;
+            padding-top: 15px;
             .content {
                     width: 100%;
                     &__img {
@@ -50,6 +51,15 @@
                     &__text {
                         font-size: 18px;
                         margin-left: 15px;
+                        p {
+                            a {
+                                color: black;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                                color: #0eb493;
+                            }
+                        }
                         .list {
                             padding-left: 20px;
                         }
@@ -58,6 +68,36 @@
                         }
                         p {
                             padding: 10px;
+                        }
+                    }
+                    .navigation{
+                        .screen-reader-text {
+                            display: none;
+                        }
+                        .nav-links {
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 16px;
+                            div {
+                                a {
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    padding: 10px 20px;
+                                    border-radius: 30px;
+                                    background-image: linear-gradient(45deg, #05755fc2 0%, #1ec9a78f 50%, #23c8a7 100%);
+                                    background-position: 100% 0;
+                                    background-size: 200% 200%;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-weight: 300;
+                                    color: white;
+                                    box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+                                    transition: .5s;
+                                }
+                                a:hover {
+                                    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+                                    background-position: 0 0;
+                                }
+                            }
                         }
                     }
             }
@@ -84,8 +124,8 @@
                     border: 2px solid white;
                 }
                 &__button:hover {
-                    color: #333;
-                    border: 2px solid #333;
+                    color: #cecece;
+                    border: 2px solid #cecece;
                     border-radius: 5px;
                 }
                 &__item {
@@ -93,16 +133,26 @@
                     .mainBlock {
 
                         &__news {
-                            background: none;
-                            padding: 10px 0;
-                            border-bottom: 1px solid #cecece;
-                            
+                            background: none; 
+                            // border-left: 2px solid #cecece;
+                            border-bottom: 2px solid #cecece;
+                            padding: 5px;
+                            margin: 7px 0;                          
                         }
-                }
-                
+
+                        &__news:hover {
+                            background-color: #fafcff;
+                            padding: 5px;
+                            box-shadow: 3px -2px 8px 0px;                          
+                        }
+
+                }               
                 .newsImg {
-                    width: 25%;
+                    width: 30%;
                     height: 80px;
+                    img {
+                        object-fit: cover;
+                    }
                 }
                 .newsText {
                     padding-left: 20px;
@@ -110,25 +160,65 @@
                     width: 70%;
                         &__title {
                             text-align: start;
-                            a {
-                                color: #337ab7;
-                            }
+                            color: #0eb493;
                         }
 
                         &__date {
                             text-align: start;
                         }
+                    }
                 }
-                .far {
-                }
-                .fa {
+            }
+        }
+    }  
+}
 
-                        &-clock {}
-                }
 
+@media screen {
+  .container {
+      @media (max-width: 1080px) {
+        padding: 20px;
+        }
+        .center {
+            @media (max-width: 1080px) {
+            margin: 0;
+            }
+            .mainBlock {
+                .news {
+                    @media (max-width: 1080px) {
+                    display: none;
+                    }
+                }
+                .content {
+                    &__text {
+                        @media (max-width: 425px) {
+                        font-size: 16px;
+                        }
+                    }
+                    .navigation .nav-links {
+                        @media (max-width: 768px) {
+                        justify-content: space-evenly;
+                        font-size: 30px;
+                        }
+                        div a {
+                            @media (max-width: 768px) {
+                            padding: 10px 30px;
+                            }
+                            span {
+                                @media (max-width: 768px) {
+                                display: none;
                                 }
                             }
-                        }
-        }
-    
+                        } 
+                    }
+                }
+                
+            }
+            .headerBlock__title {
+                @media (max-width: 425px) {
+                font-size: 20px;
+                }
+            }
+        }    
+    }
 }

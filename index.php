@@ -12,7 +12,7 @@ $posts = get_posts($args);
 ?>
 <section class="mainBlock">
     <div class="mainBlock__img">
-        <img src="<?= ASSETS_PATH  . '/assets/img/main.webp'; ?>">
+        <img width="320" height="280" width="320" height="150" src="<?= ASSETS_PATH  . '/assets/img/main.webp'; ?>" alt="main">
         <h3>Вітаємо Вас на сайті ПСMШІ!</h3>
     </div>
     <div class="mainBlock__points">
@@ -59,7 +59,7 @@ $posts = get_posts($args);
                     <i class="fas fa-clipboard-list"></i>
                 </div>
                 <div class="section__text">
-                    <h4 class="title"><a href="<?php echo get_permalink(145); ?>">РОЗКЛАД</a></h4>
+                    <h4 class="title"><a href="<?php echo get_permalink(434); ?>">РОЗКЛАД</a></h4>
                     <p class="text">Розклад занять</p>
                 </div>
             </div>
@@ -95,7 +95,9 @@ $posts = get_posts($args);
     </div>
     <div class="mainBlock__news">
         <div class="center">
-            <h2 class="title">НОВИНИ</h2>
+        <a class="title "href="<?php echo get_permalink(10); ?>">    
+                НОВИНИ
+        </a>
             <div class="delimiter">
                 <i class="fas fa-newspaper"></i>
             </div>
@@ -115,9 +117,9 @@ $posts = get_posts($args);
                 ?>
                 <div class="item">
                     <div class="item__img">                      
-                        <img src="<?php echo $img_news;?>">
+                        <img width="320" height="280" src="<?php echo $img_news;?>" alt="news">
                     </div>
-                    <h3 class="item__title"><?php the_title();?></h3>
+                    <h3 class="item__title"><a href="<?php echo get_permalink(); ?>"><?php the_title();?></a></h3>
                     <div class="item__text"><?php echo kama_excerpt();?></div>
                 </div>
                 <?endforeach;?>
@@ -133,7 +135,7 @@ $posts = get_posts($args);
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div class="section__title">
-                    <a href="<?php echo get_permalink(41); ?>">ВЛАСНА МЕТОДИЧНА БАЗА</a>
+                    <a href="<?php echo get_permalink(462); ?>">ВЛАСНА МЕТОДИЧНА БАЗА</a>
                 </div>
             </div>
             <div class="section">
@@ -199,7 +201,7 @@ $posts = get_posts($args);
                             <i class="fas fa-user-friends"></i>
                         </div>
                         <div class="quantity">2</div>
-                        <div class="text">ВИХОВНИХ ГРУП
+                        <div class="text">ВИХОВНІ ГРУПИ
                         </div>
                     </div>
                     <div class="factsBlock__item">
@@ -219,7 +221,7 @@ $posts = get_posts($args);
     <div class="mainBlock__director">
         <div class="center">
             <div class="directorImg">
-                <img src="<?php echo ASSETS_PATH . '/assets/img/director.png' ?>">
+                <img width="320" height="280" src="<?php echo ASSETS_PATH . '/assets/img/director.png' ?>" alt="director">
             </div>
             <div class="directorText">
                 <div class="directorText__name">КЛЮЧИНСЬКА АЛЕВТИНА ВОЛОДИМИРІВНА</div>
@@ -229,6 +231,10 @@ $posts = get_posts($args);
     </div>
 
 </section>
+
+<?php get_template_part('template-parts/short', 'feedback');?>
+
+
 
 
 <?php get_footer(); ?>

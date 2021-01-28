@@ -1,0 +1,66 @@
+.method {
+    background: url(../img/bg-collective.png);
+    background-repeat: repeat-y;
+    background-position: right;
+    box-shadow: inset 0px 5px 14px rgba(0,0,0,0.24);
+    padding: 20px;
+    .mainBlock {
+        top: 0;
+        max-width: 1170px;
+            &__title {
+                padding: 10px;
+            color: #168088;
+            font-weight: 600;
+            }
+    
+            &__content {  
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: center;       
+                .wp-block-file {
+                    width: 20%;
+                    padding: 20px;
+                    margin: 10px;
+                    text-align: center;
+                    border-radius: 5px;
+                    background: linear-gradient(to right, rgba(234, 233, 231, 0.7) 0%,rgba(232, 238, 243, 0.06) 50%,rgba(185, 189, 191, 0.55) 100%);
+                    box-shadow: 0px 0px 7px 1px rgba(204,196,204,0.55);
+                    height: 150px;
+                    a {
+                        color: black;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+    }
+}
+
+
+
+
+@media screen {      
+        .method {
+            
+            .mainBlock__content {
+                .wp-block-file {
+                @media (max-width: 1300px) {
+                padding: 10px;
+                }
+                @media (max-width: 1080px) {
+                    width: 25%;
+                }
+                @media (max-width: 768px) {
+                    width: 45%;
+                    background: linear-gradient(to right, rgba(234, 233, 231, 0.938) 0%, rgba(232, 238, 243, 0.795) 50%, rgba(185, 189, 191, 0.815) 100%);
+                }
+                @media (max-width: 425px) {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+        
+    

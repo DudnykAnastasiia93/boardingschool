@@ -1,0 +1,55 @@
+.collective {
+    background: url(../img/bg-collective.png);
+    background-repeat: repeat-y;
+    background-position: right;
+    box-shadow: inset 0px 5px 14px rgba(0,0,0,0.24);
+    .mainBlock {
+        top: 0;
+        max-width: 1170px;
+        margin: 30px auto;   
+        &__title {
+            padding: 10px;
+            color: #168088;
+            font-weight: 600;
+        }
+    
+        &__content {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            .person {
+                width: 370px;
+                padding: 10px;
+                margin: 10px;
+                background: #f5f5f5d9;
+                text-align: center;
+                &__img {
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 auto;
+                    img {
+                        border-radius: 50%;
+                        border: 6px solid  #16808849;
+                        object-fit: cover;
+                    }
+                }
+    
+                &__surname {
+                    font-size: 28px;
+                    color: #168088c5;
+                }
+    
+                &__name {
+                    font-size: 23px;
+                    font-weight: normal;
+                }
+    
+                &__position {
+                    color: rgb(149, 149, 156);
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+

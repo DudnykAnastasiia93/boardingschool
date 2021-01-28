@@ -1,0 +1,77 @@
+.container-schedule {
+        background: url(../img/schedule-background.jpg);
+    .textBlock {
+        text-align: center;
+            &__schedule {}
+    
+            &__shift {}
+    }
+    .mainBlock {
+            max-width: 1170px;
+            margin: 0px auto;
+            padding-bottom: 20px;
+            &__schedule {
+                overflow-x: scroll;
+
+                caption {
+                    display: none;
+                }
+                table {
+                    thead {
+                        tr {
+                            
+                            th {
+                                border: 1px solid grey;
+                                text-align: center;
+                            }
+                        }
+                        
+                    }
+                    tbody {
+                        tr {
+                            .column-1 {
+                                border-right: 1px solid grey;
+                                border-left: 1px solid grey;
+                                font-weight: bold;
+                            }
+                            .column-8 {
+                                border-right: 1px solid grey;
+                            }
+                            .column-15 {
+                                border-right: 1px solid grey;
+                            }
+                            .column-22 {
+                                border-right: 1px solid grey;
+                            }
+                            .column-29 {
+                                border-right: 1px solid grey;
+                            }
+                            .column-36 {
+                                border-right: 1px solid grey;
+                            }
+                            td {
+                                border: 1px solid rgb(226, 221, 221);
+                                text-align: center;
+                                padding: 5px;
+                            }
+                        }
+                        .row-2 {
+                            font-weight: bold;
+                            td {
+                                border-bottom: 1px solid black;
+                                z-index: 100;
+                            }
+                            .column-1 {
+                                border-bottom: none;
+                            }
+                        }
+                        .row-19 {
+                            td {
+                                border-bottom: 1px solid black; 
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

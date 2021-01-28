@@ -1,15 +1,113 @@
 //  header
 .header {
-    position: fixed;
-    top: 0;
     width: 100%;
     z-index: 10;
-    .logo {
-        width: 25%;
-        margin: auto 20px;
-    }
+    position: sticky;
+    top: 0; 
     background-color: rgba(18, 40, 83, 0.76);
     display: flex;
+        .navbar-menu {
+        background-color: #2a3e65;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(-101%);
+        transition: 0.5s;
+        width: 100%;
+        display: none;
+            &.active { 
+                transform: translateY(0);
+                transition: 0.5s; 
+            }
+            .menu-listing { 
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                li { 
+                    display: block; 
+                    a {
+                        color: white;
+                        display: block;
+                        font-size: 13px;
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 8px;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        transition: 0.5s;
+                        display: flex;
+                        align-items: center;
+                        span {
+                            margin-left: 10px;
+                        }
+                        &:hover { 
+                            background-color: #111a4e;
+                            color: #fff;transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .menuMob {
+        top: 0;
+        left: 0;
+        background-color: #111a4e;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 9999;
+        display: none;
+            span {
+                position: absolute;
+                height: 3px;
+                width: 25px;
+                background-color: #fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: 0.3s;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -8px;
+                    background-color: #fff;
+                    height: 3px;
+                    width: 25px;
+                    transition: 0.3s;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    background-color: #fff;
+                    height: 3px;
+                    width: 25px;
+                    transition: 0.3s;
+                }
+            }
+            &.active span {
+                background-color: transparent;
+                &:before { 
+                    transform: rotate(45deg);
+                    top: 0; 
+                }
+                &:after { 
+                    transform: rotate(-45deg);
+                    top: 0; 
+                }
+            }
+        }
+
+
+    .logo {
+        width: 20%;
+        margin: auto 10px;
+    }
+    
     .menu-header_menu-container {
         width: 100%;
         .menu {
@@ -30,7 +128,6 @@
                     position: absolute;
                     top: 100%;
                     left: 0;
-                    width: 240px;
                     background-color: rgba(18, 40, 83, 0.76);
                     border-left: 4px solid #fff618;
                     & li {
@@ -54,4 +151,121 @@
 }
 .menu-item i._mi, .menu-item img._mi {
     display: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen {
+  .header {
+    @media (max-width: 1300px) {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(18, 40, 83, 0.897);
+    }
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+    }
+    .menuMob {
+        @media (max-width: 768px) {
+        display: flex;
+        position: relative;
+        } 
+    }
+    .navbar-menu {
+        @media (max-width: 768px) {
+        display: flex;
+        } 
+    }
+    .logo {
+        @media (max-width: 1300px) {
+            width: 30%;
+            margin: 10px auto;
+        }
+        @media (max-width: 768px) {
+            width: 44%;
+            margin: 5px auto;
+        }
+        @media (max-width: 500px) {
+            width: 50%;
+            margin: 10px auto;
+        }
+        
+    }
+    .menu-header_menu-container {
+        @media (max-width: 768px) {
+            display: none;
+            width: 0px;
+        }
+        .menu {
+
+            @media (max-width: 1300px) {
+                background-color: #484848d4;
+            }
+        li {
+            @media (max-width: 1080px) {
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+           a {
+            @media (max-width: 1080px) {
+                display: flex;
+                flex-direction: column;
+            }
+            span {
+                @media (max-width: 1080px) {
+                    text-align: center;;
+                }
+            }
+            i {
+                @media (max-width: 1080px) {
+                    display: contents;
+                }
+            }
+        }
+    }
+        li a:hover {
+        @media (max-width: 1300px) {
+            border: none;
+            padding: 0;
+            }
+        }
+        li .sub-menu {
+        @media (max-width: 1300px) {
+            background-color: #484848d5;
+            }
+            li {
+            @media (max-width: 1300px) {
+                padding: 12px 5px;
+                }
+            @media (max-width: 1080px) {
+                padding: 5px;
+                }
+                a {
+                   @media (max-width: 1080px) {
+                    font-size: 12px;
+                    } 
+                }
+            }
+        }
+        }
+    }       
+  }
+  
+  .menu-item.menu-item-type-custom a {
+    @media (max-width: 1300px) {
+        
+    }
+  }
 }

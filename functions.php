@@ -8,7 +8,11 @@ add_action('wp_enqueue_scripts', 'boardingschool_scripts');
 // add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 function boardingschool_scripts()
 {
-    wp_enqueue_style('style-name', ASSETS_PATH  . '/assets/css/style.css');
+        wp_enqueue_style('style-name', ASSETS_PATH  . '/assets/css/style.css');
+        wp_enqueue_style( 'font-awesome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' );
+        wp_enqueue_style( 'fonts-style', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' );
+        // wp_enqueue_style( 'gstatic-style', 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' );
+        // wp_enqueue_script('style-name', ASSETS_PATH  . '/assets/js/main.js');
 }
 
 register_nav_menus(array(
@@ -22,6 +26,11 @@ function my_print($data)
     print_r($data);
     echo "</pre>";
 }
+
+// function wpschool_load_fontawesome() {
+//     wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/fonts/css/fontawesome.min.css' );
+// }
+// add_action( 'wp_enqueue_scripts', 'wpschool_load_fontawesome' );
 
 /**
  * Обрезка текста (excerpt). Шоткоды вырезаются. Минимальное значение maxchar может быть 22.
@@ -110,3 +119,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 function my_scripts_method(){
 	wp_enqueue_script( 'jquery' );
 }
+
+
+
+?>
